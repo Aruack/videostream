@@ -7,7 +7,7 @@
         "video stream"
     ],
     "website": "https://t.me/Aruack",
-    "repository": "https://github.com/aruack/videostream",
+    "repository": "https://github.com/Aruack/videostream",
     "success_url": "https://t.me/aruackofficial",
     "env": {
         "API_ID": {
