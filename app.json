@@ -1,4 +1,5 @@
-"name": "AruackBot",
+{
+    "name": "Arauck Bot",
     "description": "telegram bot for streaming video & music trought the telegram group video chat, powered by pytgcalls and pyrogram",
     "logo": "https://te.legra.ph/file/7b7500ae7291951918a69.jpg",
     "keywords": [
@@ -7,7 +8,7 @@
         "video stream"
     ],
     "website": "https://t.me/Aruack",
-    "repository": "https://github.com/Aruack/videostream",
+    "repository": "https://github.com/aruack/videostream",
     "success_url": "https://t.me/aruackofficial",
     "env": {
         "API_ID": {
