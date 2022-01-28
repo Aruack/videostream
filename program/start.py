@@ -52,13 +52,8 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ's ᴠɪᴅᴇᴏ ᴄʜᴀᴛs!**
-
-💡 **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇʏ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » 📚 ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ!**
-
-🔖 **🔖 ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » ❓ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ!**
-""",
+                f"""☃️ __Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !__\n
+💭 __[{BOT_NAME}] will help to play music & video in the video chat of telegram!__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -67,18 +62,17 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("ʙᴀsɪᴄ ɢᴜɪᴅᴇ", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("ʙᴀsɪᴄ ᴄᴍᴅ", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs", callback_data="cbcmds"),
-                    InlineKeyboardButton("ᴄʀᴇᴀᴛᴏʀ", url=f"https://t.me/Aruack"),
                 ],
                 [
                     InlineKeyboardButton(
-                    text="ʙᴏᴛ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Aruacksupport"
-                ),
-                InlineKeyboardButton(
-                    text="ʙᴏᴛ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/aruackofficial"
-                ),
+                        "ʙᴏᴛ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Aruacksupport"
+                    ),
+                    InlineKeyboardButton(
+                        "ʙᴏᴛ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/aruackofficial"
+                    ),
                 ],
             ]
         ),
