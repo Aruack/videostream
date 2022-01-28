@@ -1,4 +1,4 @@
-# Copyright (C) 2021 By MarrkMusicProject
+# Copyright (C) 2021 By Arauck
 
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -15,12 +15,8 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ __Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !__\n
-💭 __[{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ's ᴠɪᴅᴇᴏ ᴄʜᴀᴛs!__
-
-💡 __Fɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ Bᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇʏ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » 📚 Cᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ!__
-
-🔖 __🔖 ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » ❓ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ!__""",
+        f"""☃️ __Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !__\n
+💭 __[{BOT_NAME}] will help to play music & video in the video chat of telegram!__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -29,14 +25,13 @@ async def cbstart(_, query: CallbackQuery):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("ʙᴀsɪᴄ ɢᴜɪᴅᴇ", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("ʙᴀsɪᴄ ᴄᴍᴅ", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs", callback_data="cbcmds"),
-                    InlineKeyboardButton("ᴄʀᴇᴀᴛᴏʀ", url=f"https://t.me/Aruack"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "ʙᴏᴛ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Araucksupport"
+                        "ʙᴏᴛ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Aruacksupport"
                     ),
                     InlineKeyboardButton(
                         "ʙᴏᴛ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/aruackofficial"
@@ -51,7 +46,7 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ __Basic Guide for using this bot:__
+        f"""❓ __Basic ᴄᴍᴅ for using this bot:__
 
 1.) __First, add me to your group.__
 2.) __Then, promote me as administrator and give all permissions except Anonymous Admin.__
@@ -97,21 +92,21 @@ async def cbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the basic commands:
+        f"""🏮 __Here is the basic commands:__
 
-» /play (song name/link) - play music on video chat
-» /stream (query/link) - stream the yt live/radio live music
-» /vplay (video name/link) - play video on video chat
-» /vstream - play live video from yt live
-» /playlist - show you the playlist
-» /video (query) - download video from youtube
-» /song (query) - download song from youtube
-» /lyric (query) - scrap the song lyric
-» /search (query) - search a youtube video link
+» **/play** (song name/link) - __play music on video chat__
+» **/stream** (query/link) - __stream the yt live/radio live music__
+» **/vplay** (video name/link) - __play video on video chat__
+» **/vstream** - __play live video from yt live__
+» **/playlist** - __show you the playlist__
+» **/video** (query) - __download video from youtube__
+» **/song** (query) - __download song from youtube__
+» **/lyric** (query) - __scrap the song lyric__
+» **/search** (query) - __search a youtube video link__
 
-» /ping - show the bot ping status
-» /uptime - show the bot uptime status
-» /alive - show the bot alive info (in group)
+» **/ping** - __show the bot ping status__
+» **/uptime** - __show the bot uptime status__
+» **/alive** - __show the bot alive info (in group)__
 
 ⚡️ **ᴾᴼᵂᴱᴿᴱᴰ ᴮʸ {BOT_NAME} **""",
         reply_markup=InlineKeyboardMarkup(
@@ -125,15 +120,15 @@ async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 here is the admin commands:
 
-» /pause - pause the stream
-» /resume - resume the stream
-» /skip - switch to next stream
-» /stop - stop the streaming
-» /vmute - mute the userbot on voice chat
-» /vunmute - unmute the userbot on voice chat
-» /reload - reload bot and refresh the admin data
-» /userbotjoin - invite the userbot to join group
-» /userbotleave - order userbot to leave from group
+» **/pause** - __pause the stream__
+» **/resume** - __resume the stream__
+» **/skip** - __switch to next stream__
+» **/stop** - __stop the streaming__
+» **/vmute** - __mute the userbot on voice chat__
+» **/vunmute** - __unmute the userbot on voice chat__
+» **/reload** - __reload bot and refresh the admin data__
+» **/userbotjoin** - i__nvite the userbot to join group__
+» **/userbotleave** - __order userbot to leave from group__
 
 ⚡️ **ᴾᴼᵂᴱᴿᴱᴰ ᴮʸ {BOT_NAME} **""",
         reply_markup=InlineKeyboardMarkup(
