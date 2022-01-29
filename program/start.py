@@ -52,8 +52,9 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-                f"""☃️ __Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !__\n
-💭 __[{BOT_NAME}] will help to play music & video in the video chat of telegram!__""",
+        f"""☃️ __Welcome {message.from_user.mention()} !__\n
+💭 **{BOT_NAME}** __{will help to play music & video on the video chat of telegram!__
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
