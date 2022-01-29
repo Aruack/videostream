@@ -16,7 +16,7 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""☃️ __Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !__\n
-💭 __[{BOT_NAME}] will help to play music & video in the video chat of telegram!__""",
+💭 **{BOT_NAME}** __{will help to play music & video on the video chat of telegram!__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -55,11 +55,11 @@ async def cbguides(_, query: CallbackQuery):
 4.) __Turn on the video chat first before start to play video/music.__
 5.) __Sometimes, reloading the bot by using /reload command can help you to fix some problem.__
 
-📌 __If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.__
+📌 __If the userbot havent joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.__
 
 💡 __If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}__
 
-⚡ **ᴾᴼᵂᴱᴿᴱᴰ ᴮʸ {BOT_NAME} **""",
+⚡ **ᴾᴼᵂᴱᴿᴱᴰ ᴮʸ {BOT_NAME} ** """,
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]]
         ),
@@ -155,3 +155,4 @@ async def cbsudo(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cls"))
 async def close(_, query: CallbackQuery):
     await query.message.delete()
+
